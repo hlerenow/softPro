@@ -1,0 +1,52 @@
+include layout
+    link(type='text/css',rel='stylesheet',href='css/sign.css')
+    script(type="text/javascript",src="js/function.js")
+
+body
+  #container
+    .sign-title 注册
+      span.ing你正在注册企业微平台
+    form.sign-form(action="./process/sign",method="post")
+      .form-group
+         label(for='relname')姓名:
+           i.need*
+         input#relname.form-control(name="relname",type="text")
+      .radio
+        span.sex-title性别：
+        lable.radio-inline
+          input(type="radio",name="sex",value="m",checked)
+          男
+        lable.radio-inline
+          input(type="radio",name="sex",value="w")
+          女
+
+      .form-group
+         label(for='username')用户名:
+           i.need*
+         input#usename.form-control(name="username",type="text")
+      .form-group
+         label(for='password')密码:
+           i.need*
+         input#pasword.form-control(name="password",type="password")
+      .form-group
+         label(for='rpassword')重复密码:
+           i.need*
+         input#rpasword.form-control(name="rpassword",type="password")
+      .form-group
+         label(for='email')邮箱:
+           i.need*
+         input#email.form-control(name="email",type="text")
+      .form-group
+         label(for='phone')电话/手机:
+           i.need*
+         input#phone.form-control(name="phone",type="text")
+      button.btn.btn-success.btn-block注册
+      p.space
+
+    .hideen-diolog.hidden
+      span.message注册成功
+      a.login.btn.btn-block.btn-success.hidden(href="./")登录
+      button.resign.btn.btn-block.btn-danger.hidden重试
+
+
+

@@ -1,0 +1,41 @@
+.panel.panel-success.message-area.hidden
+    .panel-heading 通知信箱
+    .panel-body
+      table.table.table-bordered
+        tr
+          td序号
+          td标题
+          td发件人
+          td日期
+        each msg,index in message
+          tr
+            td.ids(id="msg#{index}")= index+1
+            td 
+              a(type='button',data-toggle='modal',data-target='#messageShow',msgId='#{msg.id}')= msg.title
+            td= msg.fromUser
+            td #{msg.date}
+
+      nav.messageSplitPage
+        ul.pagination
+          li
+            a(href="#",aria-label="Previous")
+              span(aria-hidden="true")&laquo;
+          li
+            a(href="#") 1
+          li
+            a(href="#",aria-label="Next")
+              span(aria-hidden="true")&raquo;
+
+
+.modal.fade#messageShow
+  .modal-dialog
+    .modal-content
+      .modal-header 
+        span.title
+        button.close(type='button',data-dismiss='modal',aria-lable='Close')
+          sapn &times;
+      .modal-body
+        p 阿
+
+      .modal-footer
+        button.btn(type='button',data-dismiss='modal') close

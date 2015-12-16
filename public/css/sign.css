@@ -1,0 +1,79 @@
+body{
+background: url(../img/sign-background.jpg);
+}
+
+#container{
+	width: 700px;
+	margin: 0 auto;
+	border-radius: 5px;
+	background-color:rgba(255, 255, 255, 0.95);
+	border:1px solid rgb(192,192,192);
+	box-shadow: 0 0 7px rgba(200,200,200,.75);
+	margin-top: 30px;
+}
+
+.sign-title{
+	margin: 0 auto;
+	border-bottom: 1px rgb(192,192,192) solid;
+	padding: 10px;
+	font-size: 20px;
+	color: rgb(255, 55, 55);
+	font-weight: bold;
+}
+.sign-form{
+	width: 366px;
+	margin: 0 auto;
+
+}
+
+.need{
+	color:red;
+	vertical-align: bottom;
+	line-height: 100%;
+}
+
+.sex-title{
+	font-weight: bold;
+}
+
+p.space{
+	height: 15px;
+}
+
+span.ing{
+	font-size: 14px;
+	color:rgb(144, 144, 144);
+	text-align: center;
+	padding-left: 190px;
+	font-weight: normal;
+
+}
+
+.hideen-diolog{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 400px;
+	height: 150px;
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+span.message{
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+button.login,button.resign{
+	width: 96%;
+	position: absolute;
+	bottom: 10px;
+}

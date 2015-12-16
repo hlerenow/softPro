@@ -1,0 +1,20 @@
+
+.panel
+  .panel-heading  功能
+  .pannel-body
+    if(statusJob==1001)
+      div.list-group.lisitFunction1
+        a.list-group-item.vacation.event 请假
+        a.list-group-item.message.event 通知信箱
+        a.list-group-item.meet.event.active 会议室
+        a.list-group-item.contact.event 通讯录
+        a.list-group-item.repassword(type='button',data-toggle='modal',data-target='#repasswordShow') 密码修改
+        a.list-group-item.outLogin 退出登录
+    else
+      div.listFunction2
+        a.list-group-item.anounce.event 发布通知
+        a.list-group-item.checkNews.event 信息审核
+        a.list-group-item.meet.event.active 会议室
+        a.list-group-item.contact.event 通讯录
+        a.list-group-item.repassword(data-toggle='modal',data-target='#repasswordShow')密码修改
+        a.list-group-item.outLogin() 退出登录

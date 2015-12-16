@@ -1,0 +1,52 @@
+.panel.panel-success.checkNews-area.hidden
+    .panel-heading 信息审核
+    .panel-body
+      table.table.table-bordered
+        tr
+          td序号
+          td标题
+          td来源
+          td日期
+          td状态
+        each item,index in vacationMsg
+          tr
+            td.ids= index+1
+            td 
+              a(vcMsg='#{item.id}',type='button',data-toggle='modal',data-target='#checkNewsShow')#{item.title}
+            td #{item.fromUser}
+            td #{item.date}
+            td
+              a.status(vcMsg='#{item.id}',type='button',data-toggle='modal',data-target='#checkNewsShow',messageStatus='#{item.status}')
+                if(item.status==0)
+                  未审核
+                else 
+                  if(item.status==1)
+                    通过
+                  else
+                    驳回
+
+
+      nav.checkNewsSplitPage
+        ul.pagination
+          li
+            a(href="#",aria-label="Previous")
+              span(aria-hidden="true")&laquo;
+          li
+            a(href="#") 1
+          li
+            a(href="#",aria-label="Next")
+              span(aria-hidden="true")&raquo;
+
+.modal.fade#checkNewsShow
+  .modal-dialog
+    .modal-content
+      .modal-header
+        span.title
+        button.close(type='button',data-dismiss='modal',aria-lable='Close')
+          sapn &times;
+      .modal-body
+
+
+      .modal-footer
+        button.btn(type='button',messageStatus='1') 通过
+        button.btn.btn-primary(type='button',messageStatus='2') 驳回

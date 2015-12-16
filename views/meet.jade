@@ -1,0 +1,14 @@
+.panel.panel-success.meet-area
+    .panel-heading 会议室
+    .panel-body
+      .historyChat
+        table.colWord
+      .nowmessage
+        
+          #chatInput
+            textarea(name="word",onpropertychange="this.scrollTop = this.scrollHeight ",
+onfocus="this.scrollTop = this.scrollHeight ")
+          #buttonBox
+            input.btn.btn-success.pull-right(type="submit",value="发送")
+
+

@@ -1,0 +1,21 @@
+include layout
+    link(type='text/css',rel='stylesheet',href='css/main.css')
+    script(type="text/javascript",src="js/socket.io.js")
+    script(type="text/javascript",src="js/main.js")    
+- role=1002;
+body
+  .main-box
+    .top-box
+      sapn.log-img w
+      span.logo企业微平台
+      span.hello 你好！
+      span.relName  #{relName}  
+      span.userNumber   #{userName}
+      span.hello 用户
+    .middle-box
+      .left-function
+        include listFunction
+      .right-showFunction
+        include showFunction
+      .clearfloat
+      

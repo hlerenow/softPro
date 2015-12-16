@@ -1,0 +1,40 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	outline: none !important;
+}
+
+body{
+	background: url(../img/login-background.jpg);
+}
+
+.login-Title{
+	color:white;
+}
+
+.login-Box{
+    width: 400px;
+    height: 300px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: rgba(47, 44, 44, 0.55);
+}
+
+.login-row .sign a{
+	padding-bottom: 10px;
+	float: right;
+	clear: right;
+	color:#b5b9bc;
+	text-align: right;
+}
+
+.loginErroMesg{
+	color:red;
+	font-size: 16px;
+}

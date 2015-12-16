@@ -1,0 +1,31 @@
+.function-diolog
+  include contact
+  include meet 
+  .modal.fade#repasswordShow
+    .modal-dialog
+      .modal-content
+        .modal-header 密码修改
+          button.close(type='button',data-dismiss='modal',aria-lable='Close')
+            sapn &times;
+        .modal-body
+          .myContainer
+            .myCol 旧密码:
+              i.need*
+              input(type="text",class="form-control",name="oldPassword")
+            .myCol 新密码:
+              i.need*
+              input(type="password",class="form-control",name="newPassword")
+            .myCol 确认密码:
+              i.need*
+              input(type="password",class="form-control",name="newPassword2")
+        .modal-footer
+          button.btn.btn-primary(type='button') 修改
+
+  if(statusJob==1001)
+    include message
+    include vacation
+  else
+    include anounce
+    include checkNews
+
+

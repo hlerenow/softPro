@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shopping</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		outline: none;
+	}
+	.shopBox{
+		width: 100%;
+	}
+
+
+	ul.list{
+		width: 1302px;
+		margin: 0 auto;
+		display: block;
+		list-style: none;
+	}
+
+	ul.list li{
+		display: inline-block;
+		padding: 5px;
+		background-color: white;
+		border: 1px rgb(210, 191, 191) solid;
+		margin-left: 10px;
+		margin-right: 10px;
+		overflow: hidden;
+		color: rgb(86, 85, 85);
+		font-size: 15px;
+	}
+
+	ul.list li img{
+		max-width: 100%;
+		border: 1px solid gray;
+	}
+
+	.input{
+	  display: block;
+	  width: 200px;
+	  margin: 0 auto;
+	  border: 1px solid rgb(216, 216, 216);
+	  padding: 10px;
+	}
+
+	.input input{
+		 width: 34px;
+	}
+
+	.btn{
+	width: 80px !important;
+	height: 35px !important;
+	border-radius: 5px;
+	background-color: rgb(34, 189, 89);
+	font-size: 20px;
+	color: white;
+	float: right;
+	border-color:white;
+	border-width: 1px;
+	cursor: pointer;
+	float: right;
+}
+
+.btn:hover{
+	background-color:rgb(30, 219, 97);
+}
+
+.submit{
+	width: 1270px;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-right: 17px;
+
+
+}
+
+.title{
+	width: 100%;
+	margin: 0 auto;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+div.pic{
+	width: 222px;
+	overflow: hidden;
+	height: 222px;
+}
+
+.itemname{
+	max-width: 222px;
+	overflow: hidden;
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color:rgb(86, 85, 85);
+
+}
+
+.inputR{
+	float: right;
+}
+
+	</style>
+</head>
+<body>
+	<div class="title">商品列表</div>
+	<form action="xx" method="post">
+		<div class="shopBox">
+			<ul class="list">
+				<li>
+					<div class="item">
+						<div class="pic">
+							<img src="./img/pic (1).jpg" alt=""></div>
+							<span class="itemname">havit/海威特 i5蓝牙耳机</span>
+						<span class="input">
+							单价:100元&nbsp;&nbsp;<span class="inputR">数量
+							<input type="text" name="ting4" value="0"></span>
+							</span>
+							<input type="hidden" name="ting1Price" value="100"> 
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<div class="pic">
+							<img src="./img/pic (2).jpg" alt=""></div>
+							<span class="itemname">酷我 K1无线蓝牙</span>
+						<span class="input">
+							单价:130元&nbsp;&nbsp;<span class="inputR">数量
+							<input type="text" name="ting" value="0"></span>
+							</span>
+							<input type="hidden" name="ting2Price" value="130"> 
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<div class="pic">
+							<img src="./img/pic (3).jpg" alt=""></div>
+							<spa class="itemname">雷恒 无线运动蓝牙耳机</spa>
+						<span class="input">
+							单价:150元&nbsp;&nbsp;<span class="inputR">数量
+							<input type="text" name="ting4" value="0"></span>
+							</span>
+							<input type="hidden" name="ting3Price" value="150"> 
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<div class="pic">
+							<img src="./img/pic (4).jpg" alt=""></div>
+							<span class="itemname">EAMEY/绎美 P3运动蓝牙耳机</span>
+						<span class="input">
+							单价:89元;&nbsp;&nbsp;<span class="inputR">数量
+							<input type="text" name="ting4" value="0"></span>
+							</span>
+							<input type="hidden" name="ting4Price" value="89"> 
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<div class="pic">
+							<img src="./img/pic (5).jpg" alt=""></div>
+						<span class="itemname">蛇圣 F1蓝牙耳机4.0</span>
+						<span class="input">
+							单价:95元&nbsp;&nbsp;<span class="inputR">数量
+							<input type="text" name="ting5" value="0"></span>
+						</span>
+							<input type="hidden" name="ting5Price" value="95"> 
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="submit">
+			<input type="submit" value="提交" class="btn">
+		</div>
+
+	</form>
+</body>
+</html>

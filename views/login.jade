@@ -1,0 +1,24 @@
+include layout
+    link(type='text/css',rel='stylesheet',href='css/login.css')
+    script(type="text/javascript",src="js/function.js")
+
+body
+ .login-Box
+   form#login-form(action="/process/login",method="post")
+     .login-Title.text-center
+       h1登录企业微平台
+     .login-content
+       .login-row.form-group
+         label(for="inputUsename")用户名:
+         input.form-control#inputUsename(type="text",name="username",placeholder="请输入用户名")
+         p.space
+       .login-row.form-group
+         label(for="inputPassword")密码:
+         input.form-control#inputPassword(type="password",name="password",placeholder="请输入密码")
+         p.space
+       .login-row
+         span.loginErroMesg
+         span.sign 
+           a(href="sign")注册
+       .login-row
+         input.btn-block.btn.btn-info(type="submit",value="登录")

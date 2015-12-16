@@ -1,0 +1,37 @@
+.panel.panel-success.anounce-area.hidden
+    .panel-heading 发布通知
+    .panel-body
+      .ano-contaniner
+        form(method='post',action='')
+          .anounce-message
+            .ano-head
+              .ano-title 标题:
+                input.inpt(name="anoTitle",type="text")
+              .ano-content 
+                div 正文:
+                div
+                  textarea.inpt(name="anoContent")
+          .submit
+            .btn.btn-success.pull-right 发布
+    //
+     .list-vacation
+        .panel.panel-danger
+          .panel-heading  过往
+          .pannel-body
+            .list-group
+              a.list-group-item(type='button',data-toggle='modal',data-target='#vacationShow') 个为
+              a.list-group-item(type='button',data-toggle='modal',data-target='#vacationShow') 个为
+              a.list-group-item(type='button') 个为
+      .clearfloat
+      
+.modal.fade#anounceShow
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button',data-dismiss='modal',aria-lable='Close')
+          span &times;
+      .modal-body
+        p 阿斯蒂芬岁的法国风格 
+
+      .modal-footer
+        button.btn(type='button',data-dismiss='modal') close

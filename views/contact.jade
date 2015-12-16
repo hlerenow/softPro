@@ -1,0 +1,31 @@
+.panel.panel-success.contact-area.hidden
+    .panel-heading 通讯录
+    .panel-body
+      div.serachPhone
+        input.inpt(placeholder="请输入查找人姓名")
+        button.btn.btn-info.phone(type="button")
+          span.glyphicon.glyphicon-search
+      table.table.table-bordered
+        tr
+          td工号
+          td姓名
+          td手机/电话
+          td邮箱
+        each contact,index in contactBook
+          tr
+            td.ids(id="#{index}")= contact.workNumber
+            td= contact.relName
+            td= contact.phone
+            td= contact.email
+      nav.contactSplitPage
+        ul.pagination
+          li
+            a(href="#",aria-label="Previous")
+              span(aria-hidden="true")&laquo;
+          li
+            a(href="#") 1
+          li
+            a(href="#",aria-label="Next")
+              span(aria-hidden="true")&raquo;
+
+ 

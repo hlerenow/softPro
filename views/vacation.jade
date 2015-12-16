@@ -1,0 +1,34 @@
+.panel.panel-success.vacation-area.hidden
+    .panel-heading 请假
+    .panel-body
+      .v-contaniner
+        form(method='post',action='')
+          .vacation-message
+            .v-head
+              .v-title事因:
+              .v-content
+                textarea(name="vacationContent")
+              .v-foot
+                span申请人：何雷
+                span日期:2013-10-10
+          .submit
+            .btn.btn-success.pull-right 确定
+      .list-vacation
+        .panel.panel-danger
+          .panel-heading  过往
+          .pannel-body
+            .list-group
+      .clearfloat
+//hshs       
+.modal.fade#vacationShow
+  .modal-dialog
+    .modal-content
+      .modal-header
+        span.vstatus
+        button.close(type='button',data-dismiss='modal',aria-lable='Close')
+          span &times;
+      .modal-body
+        p 阿斯蒂芬岁的法国风格 
+
+      .modal-footer
+        button.btn(type='button',data-dismiss='modal') close

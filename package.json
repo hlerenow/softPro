@@ -1,0 +1,12 @@
+{
+	"name":"newMoudle",
+	"description":"最新模块",
+	"version":"0.0.1",
+	"dependencies":{
+		"express":"3.19.1",
+		"socket.io":"1.3.7",
+		"jade":"0.20.3",
+		"mysql":"0.9.5",
+		"sequelize":"1.3.7"
+	}
+}
