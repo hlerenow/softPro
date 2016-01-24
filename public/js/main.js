@@ -252,7 +252,7 @@ function innit(){
 		var title="请假";
 		var vcmsg=$(this).attr("vcmsg");
 
-		if($(this).parent().parent().children('a.status').attr("messageStatus")!=0)
+		if($(this).attr("messagestatus")!=0)
 		{
 			$("#checkNewsShow .modal-footer").css("display","none");
 		}

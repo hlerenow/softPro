@@ -86,7 +86,7 @@ app.post('/process/sign', function(req, res) {
 			});
 
 		} else {
-			console.log('-item created whith id %s', info.insertId);
+			//console.log('-item created whith id %s', info.insertId);
 			res.send({
 				"sign": "true"
 			});
@@ -162,7 +162,7 @@ app.post("/process/vacation",function(req,res){
 	var content=req.body.content;
 	var time=req.body.time;
 	var username=req.body.username;
-	console.log(username);
+	//console.log(username);
 
 	db.query("insert into message (`fromUser`, `toUser`,`content`, `date`,`title`) VALUES (?,'root',?,?,'请假');",
 		[req.body.username,req.body.content,req.body.time],
@@ -183,13 +183,12 @@ app.post("/process/showVacation",function(req,res){
 	var content=req.body.content;
 	var time=req.body.time;
 	var username=req.body.username;
-	console.log(username);
 
 	db.query("select  DATE_FORMAT(date,'%Y-%m-%d %h:%m:%s') date,status,title,content from message where id=? ;",
 		[req.body.vid],
 		function(err,results){
 			if(!err){
-				console.log(results);
+				//console.log(results);
 				res.send({"status":1,"msg":results[0]});
 			}
 			else{
@@ -206,11 +205,11 @@ app.post("/process/doCheck",function(req,res){
 	var messageStatus=req.body.messageStatus;
 
 
-	console.log(db.query("update  message set status=? where id=? ;",
+	db.query("update  message set status=? where id=? ;",
 		[messageStatus,vcmsg],
 		function(err,results){
 			if(!err){
-				console.log(results);
+				//console.log(results);
 				res.send({"status":1,"msg":results[0]});
 			}
 			else{
@@ -218,7 +217,7 @@ app.post("/process/doCheck",function(req,res){
 				console.log(err);
 
 			}
-	}));
+	});
 });
 
 //通知发布
@@ -243,13 +242,11 @@ app.post("/process/showMessage",function(req,res){
 	var content=req.body.content;
 	var time=req.body.time;
 	var username=req.body.username;
-	console.log(username);
 
 	db.query("select  DATE_FORMAT(date,'%Y-%m-%d %h:%m:%s') date,title,content from message where id=? ;",
 		[req.body.mid],
 		function(err,results){
 			if(!err){
-				console.log(results);
 				res.send({"status":1,"msg":results[0]});
 			}
 			else{
@@ -269,7 +266,6 @@ app.post("/process/serachPhone",function(req,res){
 		[relNameQuery],
 		function(err,results){
 			if(!err){
-				console.log(results);
 				res.send({"status":1,"message":results});
 			}
 			else{
@@ -297,7 +293,6 @@ app.post("/process/innit/vacation",function(req,res){
 		[username],
 		function(err,results){
 			if(!err){
-				console.log(results);
 				res.send({"status":1,"message":results});
 			}
 			else{
